@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+// import { LoggingService } from '../logging.service';
 
 @Component({
   selector: 'app-new-account',
@@ -13,6 +14,11 @@ export class NewAccountComponent {
       name: accountName,
       status: accountStatus
     });
+
+    // This is WRONG - there is a better way to get access to the services - Injection!!
+    // const service = new LoggingService();
+    // service.logStatusChange(accountStatus);
+
     console.log('A server status changed, new status: ' + accountStatus);
   }
 }
