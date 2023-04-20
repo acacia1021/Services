@@ -6,7 +6,7 @@ import { AccountsService } from '../accounts.service';
   selector: 'app-new-account',
   templateUrl: './new-account.component.html',
   styleUrls: ['./new-account.component.css'],
-  providers: [LoggingService]
+  providers: []
 })
 export class NewAccountComponent {
   // @Output() accountAdded = new EventEmitter<{ name: string, status: string }>();
@@ -22,7 +22,7 @@ export class NewAccountComponent {
     // });
 
     this.loggingService.logStatusChange(accountStatus);
-    this.accountsService.addAccount(accountName, accountStatus);
+    // this.accountsService.addAccount(accountName, accountStatus);
 
     // This is WRONG - there is a better way to get access to the services - Injection!!
     // const service = new LoggingService();
